@@ -23,19 +23,37 @@ console.log(resultaat);
 /* Opdracht  1: Cum Laude */
 
 /* 1a: Script schrijven  */
-// De administratie moet weten hoeveel studenten er dit blok cum laude zijn afgestudeerd (8 of hoger). Daar moeten namelijk speciale diploma's voor besteld worden.
+// De administratie moet weten hoeveel studenten er dit blok cum laude zijn afgestudeerd (8 of hoger).
+// Daar moeten namelijk speciale diploma's voor besteld worden.
 // Schrijf de stapjes om dit te kunnen checken eerst uit en vraag jezelf de volgende dingen af:
 // * Hoe kan ik iedere waarde van de array checken op deze conditie?
 // * Hoe zorg ik ervoor dat dit ook werkt wanneer de array 100 entries bevat?
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
 
+function telHogeCijfers(grades) {
+    let count = 0;
+
+    for (let i = 0; i < grades.length; i++) {
+        if (grades[i] >= 8) {
+            count += 1;
+        }
+    }
+
+    return count;
+}
+
+const aantalHogeCijfers = telHogeCijfers(grades);
+console.log(aantalHogeCijfers);
+
 // ---- Verwachte uitkomst: 6
 
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
-// Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
-// Zorg ervoor dat jouw functie ook werkt als we een andere array met eindcijfers willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
+// Schrijf een functie genaamd cumLaude, die een array van cijfers verwacht (zoals grades) en het aantal
+// Cum laude studenten teruggeeft. Gebruik hiervoor jouw antwoord van 1a.
+// Zorg ervoor dat jouw functie ook werkt als we een andere array met eindcijfers willen checken, zoals bijvoorbeeld:
+// [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomsten:
@@ -43,13 +61,30 @@ console.log(resultaat);
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
+function cumLaude(grades) {
+    let count = 0;
 
+    for (let i = 0; i < grades.length; i++) {
+        if (grades[i] >= 8) {
+            count += 1;
+        }
+    }
+    return count;
+}
 
+const totalHighGrades = cumLaude(grades);
+const checkGrades = cumLaude([6, 4, 5]);
+const moreGrades = cumLaude([8, 9, 4, 6, 10]);
+
+console.log(totalHighGrades);
+console.log(checkGrades);
+console.log(moreGrades);
 
 /* Opdracht  2: Gemiddeld cijfer */
 
 /* 2a: Script schrijven  */
-// De studenten-administratie moet ieder blok opnieuw berekenen wat het gemiddelde eindcijfer is, maar we beginnen met de grades array van hierboven.
+// De studenten-administratie moet ieder blok opnieuw berekenen wat het gemiddelde eindcijfer is,
+// maar we beginnen met de grades array van hierboven.
 // Schrijf de stapjes om dit te kunnen berekenen eerst uit en vraag jezelf de volgende dingen af:
 // * Hoe wordt een gemiddelde berekend?
 // * Wat moet ik verzamelen uit de array van cijfers om uiteindelijk een gemiddelde te kunnen berekenen?
@@ -73,8 +108,6 @@ console.log(resultaat);
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
-
-
 
 
 /* Bonusopdracht: hoogste cijfer */
