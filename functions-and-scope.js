@@ -31,6 +31,7 @@ console.log(resultaat);
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
 
+console.log('-opdracht1-');
 function telHogeCijfers(grades) {
     let count = 0;
 
@@ -60,7 +61,7 @@ console.log(aantalHogeCijfers);
 // cumLaude(grades) geeft 6
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
-
+console.log('-opdracht1b-');
 function cumLaude(grades) {
     let count = 0;
 
@@ -92,7 +93,7 @@ console.log(moreGrades);
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6.642857142857143
-
+console.log('-opdracht2-');
 function averageGradeOne() {
     let sum = 0;
     for (let i = 0; i < grades.length; i++) {
@@ -115,14 +116,15 @@ console.log(totalAverageGrade);
 // averageGrade(grades) geeft 6.642857142857143
 // averageGrade([6, 4, 5]) geeft 5
 // averageGrade([8, 9, 4, 6, 10]) geeft 7.4
+console.log('-opdracht2b-');
 
 function averageGrade(grades) {
     let sumUp = 0;
     for (let i = 0; i < grades.length; i++) {
         sumUp += grades[i];
     }
-    average = sumUp / grades.length;
-    return average.toFixed(0);
+    let average = sumUp / grades.length;
+    return average.toFixed(2);
 }
 
 totalAverageGradeOne = averageGrade([6, 4, 5]);
@@ -147,7 +149,7 @@ console.log(totalAverageGradeTwo);
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 9
-
+console.log('-opdracht3a-');
 let highestNumber = grades[0];
 
 for (let i = 0; i < grades.length; i++) {
@@ -168,9 +170,10 @@ console.log(highestNumber);
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
+console.log('-opdracht3b-');
 
 function highestGrade(grades) {
-    let highestGradeCount = grades[0];{
+    let highestGradeCount = grades[0];
     for (let i = 0; i < grades.length; i++)
          {
         if (grades[i] > highestGradeCount) {
@@ -178,7 +181,6 @@ function highestGrade(grades) {
         }
     }
     return highestGradeCount;
-}
 }
 
 console.log(highestGrade(grades));
